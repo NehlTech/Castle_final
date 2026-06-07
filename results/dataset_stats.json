@@ -1,0 +1,39 @@
+{
+  "total_learners": 2000,
+  "n_features": 25,
+  "feature_names": [
+    "phishing_score",
+    "password_score",
+    "social_eng_score",
+    "data_privacy_score",
+    "secure_browsing_score",
+    "session_frequency",
+    "time_on_task_min",
+    "page_visits",
+    "quiz_attempts",
+    "completion_rate",
+    "submission_rate",
+    "avg_session_min",
+    "login_frequency",
+    "click_rate",
+    "reporting_rate",
+    "recognition_latency_s",
+    "sim_attempt_count",
+    "correct_identification",
+    "self_efficacy",
+    "threat_perception",
+    "behaviour_intention",
+    "prior_experience",
+    "age",
+    "study_level",
+    "gender"
+  ],
+  "class_distribution": {
+    "0": 571,
+    "1": 872,
+    "2": 557
+  },
+  "train_size": 1400,
+  "val_size": 300,
+  "test_size": 300
+}
