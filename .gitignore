@@ -1,0 +1,10 @@
+# CASTLE .gitignore
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+.env
+*.csv
+models/*.pt
+models/*.pkl
