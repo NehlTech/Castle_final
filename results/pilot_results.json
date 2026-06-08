@@ -1,0 +1,61 @@
+{
+  "sample_size": {
+    "experimental": 93,
+    "control": 93
+  },
+  "experimental": {
+    "pre_mean": 50.7161,
+    "pre_sd": 12.9306,
+    "post_mean": 68.1321,
+    "post_sd": 17.3531,
+    "gain_mean": 17.4161,
+    "gain_sd": 11.1577,
+    "cohens_d": 1.5609,
+    "t_stat": -14.9717,
+    "p_value": 0.0
+  },
+  "control": {
+    "pre_mean": 52.6344,
+    "pre_sd": 13.3407,
+    "post_mean": 61.4539,
+    "post_sd": 15.8201,
+    "gain_mean": 8.8195,
+    "gain_sd": 7.7146,
+    "cohens_d": 1.1432,
+    "t_stat": -10.9653,
+    "p_value": 0.0
+  },
+  "between_groups": {
+    "t_stat": 2.7279,
+    "p_value": 0.006992,
+    "cohens_d": 0.4022,
+    "significant": true
+  },
+  "instrument": {
+    "cronbachs_alpha": 0.9738,
+    "n_items": 20,
+    "passes_threshold": true
+  },
+  "tam_survey": {
+    "Perceived Usefulness (PU)": {
+      "mean": 4.1491,
+      "sd": 0.479,
+      "alpha": 0.9889
+    },
+    "Perceived Ease of Use (PEU)": {
+      "mean": 3.9187,
+      "sd": 0.6,
+      "alpha": 0.9939
+    },
+    "Trust in Explanations (TE)": {
+      "mean": 4.149,
+      "sd": 0.498,
+      "alpha": 0.9903
+    },
+    "Intention to Use (IU)": {
+      "mean": 4.0675,
+      "sd": 0.5771,
+      "alpha": 0.9917
+    }
+  }
+}
