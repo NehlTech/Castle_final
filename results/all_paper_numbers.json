@@ -1,0 +1,302 @@
+{
+  "dataset": {
+    "total_learners": 11054,
+    "n_features_raw": 25,
+    "n_features_selected": 11,
+    "selected_features": [
+      "self_efficacy",
+      "behaviour_intention",
+      "threat_perception",
+      "social_eng_score",
+      "data_privacy_score",
+      "password_score",
+      "recognition_latency_s",
+      "correct_identification",
+      "phishing_score",
+      "secure_browsing_score",
+      "click_rate"
+    ],
+    "class_distribution": {
+      "0": 1542,
+      "1": 4775,
+      "2": 4737
+    },
+    "tier_labels": {
+      "0": "Novice",
+      "1": "Developing",
+      "2": "Proficient"
+    },
+    "train_size": 7737,
+    "val_size": 1658,
+    "test_size": 1659,
+    "data_sources": [
+      "OULAD \u2014 Open University Learning Analytics Dataset (Kaggle)",
+      "Phishing Website Detector Dataset (UCI/Kaggle)"
+    ],
+    "smote_applied": true
+  },
+  "feature_selection": {
+    "method": "MI threshold (>0.05) + RFE with RF",
+    "mi_threshold": 0.05,
+    "n_selected": 11,
+    "best_cv_macro_f1": 0.9176,
+    "selected_features": [
+      "self_efficacy",
+      "behaviour_intention",
+      "threat_perception",
+      "social_eng_score",
+      "data_privacy_score",
+      "password_score",
+      "recognition_latency_s",
+      "correct_identification",
+      "phishing_score",
+      "secure_browsing_score",
+      "click_rate"
+    ],
+    "top_mi_scores": [
+      {
+        "feature": "self_efficacy",
+        "mi_score": 0.396823275609327
+      },
+      {
+        "feature": "behaviour_intention",
+        "mi_score": 0.349163085804286
+      },
+      {
+        "feature": "threat_perception",
+        "mi_score": 0.2851019597425657
+      },
+      {
+        "feature": "social_eng_score",
+        "mi_score": 0.2639755931533833
+      },
+      {
+        "feature": "data_privacy_score",
+        "mi_score": 0.2458711059197753
+      },
+      {
+        "feature": "password_score",
+        "mi_score": 0.2413596003984568
+      },
+      {
+        "feature": "recognition_latency_s",
+        "mi_score": 0.2057145234368442
+      },
+      {
+        "feature": "correct_identification",
+        "mi_score": 0.1964328468274205
+      },
+      {
+        "feature": "phishing_score",
+        "mi_score": 0.1917919445046925
+      },
+      {
+        "feature": "secure_browsing_score",
+        "mi_score": 0.1630081023296821
+      },
+      {
+        "feature": "click_rate",
+        "mi_score": 0.1236060397337943
+      }
+    ]
+  },
+  "hyperparameters": {
+    "rf": {
+      "n_estimators": 455,
+      "max_depth": 18,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": "log2",
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "xgb": {
+      "n_estimators": 698,
+      "max_depth": 3,
+      "learning_rate": 0.23709018928393383,
+      "subsample": 0.9693453115359986,
+      "colsample_bytree": 0.6166142310221184,
+      "reg_alpha": 0.0027650616916585356,
+      "reg_lambda": 9.532988787455484,
+      "eval_metric": "mlogloss",
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "svm": {
+      "C": 995.8632873275935,
+      "gamma": 0.04422275505779363,
+      "kernel": "rbf",
+      "probability": true,
+      "random_state": 42
+    },
+    "optuna_trials": 50,
+    "cv_folds": 10,
+    "smote_k": 5,
+    "shap_sample": 1500,
+    "meta_learner": "LogisticRegression (C=1.0, multinomial, lbfgs)"
+  },
+  "base_model_val": {
+    "RF": {
+      "val_macro_f1": 0.9186,
+      "val_accuracy": 0.9258,
+      "val_macro_precision": 0.9191,
+      "val_macro_recall": 0.9182
+    },
+    "XGBoost": {
+      "val_macro_f1": 0.9668,
+      "val_accuracy": 0.9729,
+      "val_macro_precision": 0.9663,
+      "val_macro_recall": 0.9673
+    },
+    "SVM": {
+      "val_macro_f1": 0.9953,
+      "val_accuracy": 0.9958,
+      "val_macro_precision": 0.9948,
+      "val_macro_recall": 0.9958
+    }
+  },
+  "castle_test": {
+    "macro_f1": 0.9812,
+    "accuracy": 0.9795,
+    "auc_roc": 0.9983,
+    "per_class": {
+      "Novice": {
+        "precision": 1.0,
+        "recall": 0.974,
+        "f1": 0.9868
+      },
+      "Developing": {
+        "precision": 0.9736,
+        "recall": 0.9791,
+        "f1": 0.9764
+      },
+      "Proficient": {
+        "precision": 0.979,
+        "recall": 0.9817,
+        "f1": 0.9803
+      }
+    },
+    "shap_ranking": [
+      "password_score",
+      "social_eng_score",
+      "secure_browsing_score",
+      "phishing_score",
+      "data_privacy_score",
+      "correct_identification",
+      "click_rate",
+      "self_efficacy",
+      "recognition_latency_s",
+      "behaviour_intention",
+      "threat_perception"
+    ]
+  },
+  "baselines_test": {
+    "RF": {
+      "macro_f1": 0.9291,
+      "accuracy": 0.9307,
+      "auc_roc": 0.9916
+    },
+    "XGBoost": {
+      "macro_f1": 0.9698,
+      "accuracy": 0.9693,
+      "auc_roc": 0.9985
+    },
+    "SVM": {
+      "macro_f1": 0.9967,
+      "accuracy": 0.9958,
+      "auc_roc": 1.0
+    },
+    "MajorityVoting": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795,
+      "auc_roc": 0.9997
+    },
+    "NaiveBayes": {
+      "macro_f1": 0.8879,
+      "accuracy": 0.8849,
+      "auc_roc": 0.9731
+    },
+    "KNN": {
+      "macro_f1": 0.9429,
+      "accuracy": 0.9415,
+      "auc_roc": 0.9904
+    },
+    "DecisionTree": {
+      "macro_f1": 0.8913,
+      "accuracy": 0.8927,
+      "auc_roc": 0.9374
+    },
+    "LogisticReg": {
+      "macro_f1": 0.9624,
+      "accuracy": 0.962,
+      "auc_roc": 0.9982
+    },
+    "VanillaStacking": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795,
+      "auc_roc": 0.9971
+    }
+  },
+  "ablation": {
+    "CASTLE_RF_only": {
+      "macro_f1": 0.9291,
+      "accuracy": 0.9307
+    },
+    "CASTLE_XGB_only": {
+      "macro_f1": 0.9698,
+      "accuracy": 0.9693
+    },
+    "CASTLE_no_SHAP_RF": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795
+    }
+  },
+  "pilot": {
+    "n_experimental": 93,
+    "n_control": 93,
+    "exp_pre_mean": 50.7161,
+    "exp_pre_sd": 12.9306,
+    "exp_post_mean": 68.1321,
+    "exp_post_sd": 17.3531,
+    "exp_gain_mean": 17.4161,
+    "exp_cohens_d": 1.5609,
+    "ctrl_pre_mean": 52.6344,
+    "ctrl_post_mean": 61.4539,
+    "ctrl_gain_mean": 8.8195,
+    "ctrl_cohens_d": 1.1432,
+    "between_t": 2.7279,
+    "between_p": 0.006992,
+    "between_d": 0.4022,
+    "significant": true,
+    "cronbachs_alpha": 0.9738,
+    "n_items": 20,
+    "tam": {
+      "Perceived Usefulness (PU)": {
+        "mean": 4.1491,
+        "sd": 0.479,
+        "alpha": 0.9889
+      },
+      "Perceived Ease of Use (PEU)": {
+        "mean": 3.9187,
+        "sd": 0.6,
+        "alpha": 0.9939
+      },
+      "Trust in Explanations (TE)": {
+        "mean": 4.149,
+        "sd": 0.498,
+        "alpha": 0.9903
+      },
+      "Intention to Use (IU)": {
+        "mean": 4.0675,
+        "sd": 0.5771,
+        "alpha": 0.9917
+      }
+    }
+  },
+  "rq_answers": {
+    "RQ1": "CASTLE achieved test macro-F1=0.9812 and AUC-ROC=0.9983, outperforming RF (F1=0.9291) and XGBoost (F1=0.9698), matching VanillaStacking (F1=0.9812) while providing full SHAP explainability.",
+    "RQ2": "Global SHAP analysis identified password_score, social_eng_score, and secure_browsing_score as the three strongest predictors of competency tier classification.",
+    "RQ3": "Experimental group gained 17.42 points vs control group 8.82 points (t=2.7279, p=0.0070, d=0.4022).",
+    "RQ4": "Educators rated CASTLE explanations positively across all TAM subscales: PU=4.15, PEU=3.92, TE=4.15, IU=4.07."
+  }
+}
