@@ -1,0 +1,20 @@
+{
+  "RF": {
+    "val_macro_f1": 0.9186,
+    "val_accuracy": 0.9258,
+    "val_macro_precision": 0.9191,
+    "val_macro_recall": 0.9182
+  },
+  "XGBoost": {
+    "val_macro_f1": 0.9668,
+    "val_accuracy": 0.9729,
+    "val_macro_precision": 0.9663,
+    "val_macro_recall": 0.9673
+  },
+  "SVM": {
+    "val_macro_f1": 0.9953,
+    "val_accuracy": 0.9958,
+    "val_macro_precision": 0.9948,
+    "val_macro_recall": 0.9958
+  }
+}
