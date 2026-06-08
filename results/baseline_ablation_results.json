@@ -1,0 +1,103 @@
+{
+  "castle": {
+    "macro_f1": 0.9812,
+    "accuracy": 0.9795,
+    "auc_roc": 0.9983,
+    "per_class": {
+      "Novice": {
+        "precision": 1.0,
+        "recall": 0.974,
+        "f1": 0.9868
+      },
+      "Developing": {
+        "precision": 0.9736,
+        "recall": 0.9791,
+        "f1": 0.9764
+      },
+      "Proficient": {
+        "precision": 0.979,
+        "recall": 0.9817,
+        "f1": 0.9803
+      }
+    }
+  },
+  "baselines": {
+    "RF": {
+      "macro_f1": 0.9291,
+      "accuracy": 0.9307,
+      "auc_roc": 0.9916,
+      "macro_precision": 0.9317,
+      "macro_recall": 0.9268
+    },
+    "XGBoost": {
+      "macro_f1": 0.9698,
+      "accuracy": 0.9693,
+      "auc_roc": 0.9985,
+      "macro_precision": 0.9732,
+      "macro_recall": 0.9665
+    },
+    "SVM": {
+      "macro_f1": 0.9967,
+      "accuracy": 0.9958,
+      "auc_roc": 1.0,
+      "macro_precision": 0.9967,
+      "macro_recall": 0.9967
+    },
+    "MajorityVoting": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795,
+      "auc_roc": 0.9997,
+      "macro_precision": 0.9812,
+      "macro_recall": 0.9812
+    },
+    "NaiveBayes": {
+      "macro_f1": 0.8879,
+      "accuracy": 0.8849,
+      "auc_roc": 0.9731,
+      "macro_precision": 0.8879,
+      "macro_recall": 0.8879
+    },
+    "KNN": {
+      "macro_f1": 0.9429,
+      "accuracy": 0.9415,
+      "auc_roc": 0.9904,
+      "macro_precision": 0.9429,
+      "macro_recall": 0.9429
+    },
+    "DecisionTree": {
+      "macro_f1": 0.8913,
+      "accuracy": 0.8927,
+      "auc_roc": 0.9374,
+      "macro_precision": 0.8913,
+      "macro_recall": 0.8913
+    },
+    "LogisticReg": {
+      "macro_f1": 0.9624,
+      "accuracy": 0.962,
+      "auc_roc": 0.9982,
+      "macro_precision": 0.9624,
+      "macro_recall": 0.9624
+    },
+    "VanillaStacking": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795,
+      "auc_roc": 0.9971,
+      "macro_precision": 0.9812,
+      "macro_recall": 0.9812
+    }
+  },
+  "ablation": {
+    "CASTLE_RF_only": {
+      "macro_f1": 0.9291,
+      "accuracy": 0.9307
+    },
+    "CASTLE_XGB_only": {
+      "macro_f1": 0.9698,
+      "accuracy": 0.9693
+    },
+    "CASTLE_no_SHAP_RF": {
+      "macro_f1": 0.9812,
+      "accuracy": 0.9795
+    }
+  }
+}
