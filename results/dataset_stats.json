@@ -1,20 +1,24 @@
 {
-  "total_learners": 2000,
+  "total_learners": 11054,
   "n_features": 25,
   "feature_names": [
+    "session_frequency",
+    "total_clicks",
+    "avg_clicks_per_day",
+    "login_frequency",
+    "quiz_attempts",
+    "mean_score",
+    "submission_rate",
+    "score_consistency",
+    "gender",
+    "age",
+    "study_level",
+    "prior_experience",
     "phishing_score",
     "password_score",
     "social_eng_score",
     "data_privacy_score",
     "secure_browsing_score",
-    "session_frequency",
-    "time_on_task_min",
-    "page_visits",
-    "quiz_attempts",
-    "completion_rate",
-    "submission_rate",
-    "avg_session_min",
-    "login_frequency",
     "click_rate",
     "reporting_rate",
     "recognition_latency_s",
@@ -22,18 +26,23 @@
     "correct_identification",
     "self_efficacy",
     "threat_perception",
-    "behaviour_intention",
-    "prior_experience",
-    "age",
-    "study_level",
-    "gender"
+    "behaviour_intention"
   ],
   "class_distribution": {
-    "0": 571,
-    "1": 872,
-    "2": 557
+    "0": 1542,
+    "1": 4775,
+    "2": 4737
   },
-  "train_size": 1400,
-  "val_size": 300,
-  "test_size": 300
+  "tier_labels": {
+    "0": "Novice",
+    "1": "Developing",
+    "2": "Proficient"
+  },
+  "train_size": 7737,
+  "val_size": 1658,
+  "test_size": 1659,
+  "data_sources": [
+    "OULAD \u2014 Open University Learning Analytics Dataset (Kaggle)",
+    "Phishing Website Detector Dataset (UCI/Kaggle)"
+  ]
 }
