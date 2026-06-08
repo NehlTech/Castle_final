@@ -1,7 +1,13 @@
 [
-  "data_privacy_score",
-  "phishing_score",
+  "self_efficacy",
+  "behaviour_intention",
+  "threat_perception",
   "social_eng_score",
+  "data_privacy_score",
+  "password_score",
+  "recognition_latency_s",
+  "correct_identification",
+  "phishing_score",
   "secure_browsing_score",
-  "password_score"
+  "click_rate"
 ]
